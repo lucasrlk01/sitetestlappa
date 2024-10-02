@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Lappa</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/index.js" defer></script>
+</head>
+<body>
+    <script>
+        window.onload = function() {
+            window.location.href = "./html/login.html"; // Substitua pelo caminho correto da sua tela de login
+        };
+    </script>
+    
+    <div class="sidebar">
+        <div class="logo">LAPPA</div>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+            <li><a href="vendas.html"><i class="fas fa-chart-line"></i> Vendas</a></li>
+            <li><a href="produtos.html"><i class="fas fa-box"></i> Produtos</a></li>
+            <li><a href="equipe.html"><i class="fas fa-users"></i> Equipe</a></li>
+            <li><a href="integracoes.html"><i class="fas fa-plug"></i> Integrações</a></li>
+            <li><a href="compras.html"><i class="fas fa-shopping-cart"></i> Compras</a></li>
+            <li><a href="configuracoes.html"><i class="fas fa-cog"></i> Configurações</a></li>
+        </ul>
+        <div class="usuario">
+            <i class="fas fa-user-circle"></i>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h1 id="welcomeMessage">Boas-vindas, <span id="userName"></span></h1>
+            <h2>Resumo de Vendas</h2>
+        </header>
+        <section class="resumo">
+            <div class="card vendas-hoje">
+                <span class="card-title">Vendas hoje</span>
+                <strong class="card-value" id="vendasHoje">R$ 74,90</strong>
+            </div>
+            <div class="card saldo-disponivel">
+                <span class="card-title">Saldo disponível</span>
+                <strong class="card-value" id="saldoDisponivel">R$ 39,95</strong>
+            </div>
+            <div class="card saldo-pendente">
+                <span class="card-title">Pendente</span>
+                <strong class="card-value" id="saldoPendente">R$ 39,95</strong>
+            </div>
+            <div class="card nivel">
+                <span class="card-title">Nível 1</span>
+                <strong class="card-value" id="nivel">R$ 0,00</strong>
+                <div class="nivel-info">
+                    <p>R$ 0,00 em vendas</p>
+                    <p></p>
+                    <p>10k</p>
+                </div>
+            </div>
+        </section>
+        <section class="grafico">
+            <h2>Gráfico de Faturamento</h2>
+            <canvas id="myChart"></canvas>
+        </section>
+    </div>
+</body>
+</html>
